@@ -15,7 +15,14 @@ function App() {
     apiCall();
   }, []);
 
-  return <pre>{resposta ? JSON.stringify(resposta, null, 2) : null}</pre>;
+  return (
+    <>
+      <input type="text" placeholder="name"/>
+      <input type="text" placeholder="author"/>
+      <button>Add to the Shelf</button>
+      <pre>{resposta ? JSON.stringify(resposta, null, 2) : null}</pre>
+    </>
+  );
 }
 
 export default App;
